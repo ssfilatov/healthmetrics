@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097.2" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i6Z-lo-QB6">
+    <device id="watch42"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+    </dependencies>
+    <scenes>
+        <!--HeartMetrics-->
+        <scene sceneID="9ht-DC-amT">
+            <objects>
+                <controller identifier="HeartMetrics" hidesWhenLoading="NO" id="i6Z-lo-QB6" customClass="HealthMetricsController" customModule="Watch_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="U2x-cT-5eZ">
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                        </group>
+                        <imageView alignment="left" image="Image" id="4wT-T4-ciM"/>
+                        <label width="56" height="53" alignment="left" text="---" id="MxS-A9-UPo" colorLabel="IBBuiltInLabel-Yellow">
+                            <color key="textColor" red="0.91579771040000002" green="0.86501885700000003" blue="0.22146627890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Start" id="dQz-Zg-yHg">
+                            <connections>
+                                <action selector="startBtnTapped" destination="i6Z-lo-QB6" id="Nxq-eZ-lqp"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="heart" destination="4wT-T4-ciM" id="FEr-3L-LAA"/>
+                        <outlet property="label" destination="MxS-A9-UPo" id="CMl-NW-jxr"/>
+                        <outlet property="startStopButton" destination="dQz-Zg-yHg" id="AiA-S8-zw7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-302.51282051282055" y="-1136.3846153846155"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="38" height="33"/>
+    </resources>
+</document>
